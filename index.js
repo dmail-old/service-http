@@ -8,8 +8,8 @@ var HttpService = rest.createService({
 		if( request.url.protocol === 'http://' || request.url.protocol === 'https://' ){
 			var promise = transport(request);
 
-			// how to cancel response generation ? 
-			promise.oncancel = function(){
+			// how to abort response generation ? 
+			promise.onabort = function(){
 
 			};
 
