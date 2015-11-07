@@ -8,5 +8,8 @@
 	},
 	"dependencies": {
 		"@dmail/rest": "git+https://github.com/dmail/rest"
+	},
+	"scripts": {
+		"link-dev": "npm link ../rest"
 	}
 }

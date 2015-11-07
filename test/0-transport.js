@@ -1,9 +1,10 @@
-import Request from '../../lib/request.js';
-import ResponseGenerator from '../../lib/response-generator.js';
+import Rest from '../node_modules/@dmail/rest/index.js';
 
-var fetch = function(request){
-	return ResponseGenerator.create(request);
-};
+import httpService from '../index.js';
+
+var rest = Rest.create();
+
+rest.use(httpService);
 
 var hostname = '127.0.0.1';
 var port = 8000;
@@ -35,9 +36,7 @@ export function afterAll(){
 
 export function suite(add){
 	add("node transportRequest", function(test){
-		var request = Request.create({url: url});
-
-		return test.resolveWith(fetch(request).then(function(response){
+		return test.resolveWith(rest.fetch(url).then(function(response){
 			return response.text();
 		}), 'export default true');
 	});
