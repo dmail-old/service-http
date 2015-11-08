@@ -1,3 +1,10 @@
+/*
+
+// right now this is just testing that request é reponse body can remains opened
+// this test belongs to rest
+// here we can test that http service doesn't break this contract
+// but not the concept in itself
+
 import Rest from '../node_modules/@dmail/rest/index.js';
 import Server from '../node_modules/@dmail/server-node/index.js';
 
@@ -42,3 +49,10 @@ export function suite(add){
 	});
 
 }
+*/
+
+// right now this is just testing that request é reponse body can remains opened
+// this test belongs to rest
+// here we can test that http service doesn't break this contract
+// but not the root API
+
