@@ -18,12 +18,12 @@ export function afterAll(){
 }
 
 export function suite(add){
-	add("node transportRequest", function(test){
+	add("node transportRequest", function(){
 		var rest = Rest.create();
 
 		rest.use(httpService);
 
-		return test.resolveWith(rest.fetch(url).then(function(response){
+		return this.resolveWith(rest.fetch(url).then(function(response){
 			return response.text();
 		}), 'export default true');
 	});
