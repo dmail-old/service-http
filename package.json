@@ -7,10 +7,9 @@
 		"url": "https://github.com/dmail/service-http"
 	},
 	"devDependencies": {
-		"@dmail/rest": "git+https://github.com/dmail/rest",
-		"@dmail/server-node": "git+https://github.com/dmail/server-node"
+
 	},
 	"scripts": {
-		"link-dev": "npm link ../rest & npm link ../server-node"
+		"link-dev": "npm link ../rest"
 	}
 }
